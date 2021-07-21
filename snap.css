@@ -25,23 +25,13 @@ html, body {
           transform: translate3d(0, 0, 0);
 }
 
-.snap-drawers {
-  position: absolute;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  width: auto;
-  height: auto;
-}
-
 .snap-drawer {
   position: absolute;
   top: 0;
   right: auto;
   bottom: 0;
   left: auto;
-  width: 265px;
+  width: 350px;
   height: auto;
   overflow: auto;
   -webkit-overflow-scrolling: touch;
@@ -55,19 +45,27 @@ html, body {
 .snap-drawer-left {
   left: 0;
   z-index: 1;
+  display: none;
 }
 
 .snap-drawer-right {
   right: 0;
   z-index: 1;
-}
-
-.snapjs-left .snap-drawer-right,
-.snapjs-right .snap-drawer-left {
   display: none;
 }
 
-.snapjs-expand-left .snap-drawer-left,
-.snapjs-expand-right .snap-drawer-right {
-  width: 100%;
-}
+/* Default demo styles */
+.snap-content {
+	background: #BFC7D8;
+  }
+  
+  .snap-drawers {
+	background: #323949;
+	width: 100%;
+	display: block;
+  }
+  
+  .snap-drawer {
+	  background: #323949;
+	  color: #eee;
+  }

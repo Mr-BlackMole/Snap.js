@@ -1,0 +1,66 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <title>Snap.js</title>
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" type="text/css" href="../../snap.css" />
+    <link rel="stylesheet" type="text/css" href="screenStyle.css" />
+
+    <script type="text/javascript" src="../../snap.js"></script>
+</head>
+
+<body id="body">
+    <div class="snap-drawers" style="display: flex;">
+        <div style="display: flex; width: 350px;">
+            <div class="snap-drawer snap-drawer-left" id="left-drawer" style="display: flex;">
+                <div style="display: flex; width: 70px; background-color: #36404a;"></div>
+                <div style="width: 100%;">
+                    <ul class="list">
+                        <h2>Snap.js</h2>
+                        <li class="list-divider">Share</li>
+                    </ul>
+                    <br />
+                    dsadsasssssssssssssssssssssssssss
+                </div>
+            </div>
+        </div>
+        <div id="content" class="snap-content" style="width: 100%;">
+            <div class="content" style="background-color: #555;">
+                body
+            </div>
+        </div>
+        <div class="snap-drawer snap-drawer-right" id="right-drawer" style="width: 350px;">
+            <ul class="list">
+                <li>List item 1 <span class="chevron"></span></li>
+                <li>List item 2 <span class="chevron"></span></li>
+                <li>List item 3 <span class="chevron"></span></li>
+            </ul>
+            <br />
+
+            <div id="w"></div>
+            <div id="h"></div>
+            dsadsasssssssssssssssss
+            dsadsasssssssssssssssssdsadsassssss
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        var snapper = new Snap({
+            element: document.getElementById('content'),
+        });
+
+        document.getElementById('w').innerHTML = window.innerWidth;
+        window.addEventListener('resize', function (event) {
+            document.getElementById('w').innerHTML = window.innerWidth;
+        }, true);
+
+    </script>
+</body>
+
+</html>

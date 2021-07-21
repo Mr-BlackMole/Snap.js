@@ -1,1 +1,108 @@
-<!DOCTYPE HTML><html lang="en-US">    <head>        <title>Snap.js</title>        <meta http-equiv="x-ua-compatible" content="IE=edge" />        <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">        <meta name="apple-mobile-web-app-capable" content="yes">        <meta name="apple-touch-fullscreen" content="yes">        <link rel="stylesheet" type="text/css" href="../../snap.css" />        <link rel="stylesheet" type="text/css" href="../assets/demo.css" />    </head>    <body>        <div class="snap-drawers">            <div class="snap-drawer snap-drawer-left">                <div>                    <h3>Snap.js</h3>                    <div class="demo-social">                        <a href="https://twitter.com/share" class="twitter-share-button" data-lang="en" data-text="Snap.js - A Library for creating beautiful mobile shelfs in Javascript" data-url="http://jakiestfu.github.com/Snap.js/" data-count="none" data-via="jakiestfu">Tweet</a>                        <a href="https://twitter.com/jakiestfu" class="twitter-follow-button" data-show-count="false" data-lang="en">Follow @jakiestfu</a>                        <iframe src="http://ghbtns.com/github-btn.html?user=jakiestfu&amp;repo=Snap.js&amp;type=watch&amp;count=true" allowtransparency="true" frameborder="0" scrolling="0" width="120" height="20"></iframe>                    </div>                    <h4>Demos</h4>                    <ul>                        <li><a href="default.html">Default</a></li>                        <li><a href="noDrag.html">No Drag</a></li>                        <li><a href="dragElement.html">Drag Element</a></li>                        <li><a href="rightDisabled.html">Right Disabled</a></li>                        <li><a href="hyperextend.html">Hyperextension Disabled</a></li>                        <li><a href="skinnyThreshold.html">Skinny Threshold</a></li>                        <li><a href="toggles.html">Toggles</a></li>                        <li><a href="classNames.html">Class Names</a></li>                        <li><a href="expand.html">Expanding</a></li>                        <li><a href="settings.html">Settings</a></li>                        <li><a href="ratchet/template.html">Ratchet</a></li>                    </ul>                    <div>                        <p>The Default demo shows basic Snap.js functionality</p>                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non erat ac leo ultrices blandit sed vel risus. Pellentesque facilisis blandit auctor. Maecenas vestibulum vulputate tincidunt. Mauris nec quam libero. Fusce eget ligula non leo varius condimentum quis ac elit. Donec id urna ut neque semper ultrices. Proin ut suscipit felis. Nullam neque felis, ullamcorper scelerisque volutpat vel, vehicula vehicula neque. Aenean scelerisque elit ac erat sagittis ullamcorper.</p>                    </div>                </div>            </div>            <div class="snap-drawer snap-drawer-right"></div>        </div>                <div id="content" class="snap-content">            <div id="toolbar">                <a href="#" id="open-left"></a>                <h1>Default</h1>            </div>        </div>        <script type="text/javascript" src="../../snap.js"></script>        <script type="text/javascript">            var snapper = new Snap({                element: document.getElementById('content')            });                    </script>        <script type="text/javascript" src="../assets/demo.js"></script>        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>           </body></html>
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+    <title>Snap.js</title>
+    <meta http-equiv="x-ua-compatible" content="IE=edge" />
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-touch-fullscreen" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" type="text/css" href="../../snap.css" />
+    <!-- <link rel="stylesheet" type="text/css" href="screenStyle.css" /> -->
+
+    <script type="text/javascript" src="../../snap.js"></script>
+
+    <!-- <div id="content" class="snap-content">
+        <div id="toolbar">
+            <a href="#" id="open-left"></a>
+        </div> -->
+</head>
+
+<body>
+    <div class="content">
+        <div class="content-padded">
+            <p class="welcome">Thanks for downloading Ratchet. This is an example HTML page that's linked up to
+                compiled Ratchet CSS and JS, has the proper meta tags and the HTML structure. Need some more help
+                before you start filling this with your own content? Check out some Ratchet resorces:</p>
+        </div>
+    </div>
+    </div> -->
+    <div class="snap-drawers" style="display: flex;">
+        <div style="display: flex; width: 350px;">
+            <div class="snap-drawer snap-drawer-left" id="left-drawer" style="display: flex;">
+                <div style="display: flex; width: 70px; background-color: #36404a;"></div>
+                <div style="width: 100%;">
+                    >>>>>>>>>>>>>>>>>>>>>>>
+                </div>
+            </div>
+        </div>
+        <div id="content" class="snap-content" style="width: 100%;">
+            <header class="bar-title">
+                <button class="button" id="toggle-left">Left</button>
+                <h1 class="title">Ratchet</h1>
+                <button class="button" id="toggle-right">Right</button>
+            </header>
+            <div class="content" style="background-color: #555;">
+                body
+            </div>
+        </div>
+        <div class="snap-drawer snap-drawer-right" id="right-drawer" style="width: 350px;">
+            <ul class="list">
+                <li>List item 1 <span class="chevron"></span></li>
+                <li>List item 2 <span class="chevron"></span></li>
+                <li>List item 3 <span class="chevron"></span></li>
+            </ul>
+        </div>
+    </div>
+
+    <style>
+        .active-drawer {
+            display: block;
+        }
+    </style>
+    <script type="text/javascript">
+
+        var
+
+            // Helper
+            $ = function (id) {
+                return document.getElementById(id);
+            },
+
+            // Instance
+            snapper = new Snap({
+                element: document.getElementById('content')
+            }),
+
+            // 
+            UpdateDrawers = function () {
+                var state = snapper.state(),
+                    towards = state.info.towards,
+                    opening = state.info.opening;
+                if (opening == 'right' && towards == 'left') {
+                    $('right-drawer').classList.add('active-drawer');
+                    $('left-drawer').classList.remove('active-drawer');
+                } else if (opening == 'left' && towards == 'right') {
+                    $('right-drawer').classList.remove('active-drawer');
+                    $('left-drawer').classList.add('active-drawer');
+                }
+            };
+
+        snapper.on('drag', UpdateDrawers);
+        snapper.on('animating', UpdateDrawers);
+        snapper.on('animated', UpdateDrawers);
+
+        $('toggle-left').addEventListener('click', function () {
+            snapper.toggle('left');
+        });
+
+        $('toggle-right').addEventListener('click', function () {
+            snapper.toggle('right');
+        });
+
+    </script>
+</body>
+
+</html>

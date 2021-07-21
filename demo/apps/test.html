@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Ratchet template page</title>
+
+    <!-- Sets initial viewport load and disables zooming    -->
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+
+    <!-- Makes your prototype chrome-less once bookmarked to your phone's home screen -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+    <link rel="stylesheet" type="text/css" href="../../snap.css" />
+
+    <script type="text/javascript" src="../../snap.js"></script>
+
+</head>
+
+<body>
+
+    <div class="snap-drawers">
+        <div class="snap-drawer snap-drawer-left" id="left-drawer">
+            <ul class="list">
+                <h2>Snap.js</h2>
+                <li class="list-divider">Share</li>
+                <li>
+                    <div class="demo-social">
+                        <iframe
+                            src="http://ghbtns.com/github-btn.html?user=jakiestfu&amp;repo=Snap.js&amp;type=watch&amp;count=true"
+                            allowtransparency="true" frameborder="0" scrolling="0" width="120" height="20"></iframe>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="snap-drawer snap-drawer-right" id="right-drawer">
+            <ul class="list">
+                <li>List item 1 <span class="chevron"></span></li>
+                <li>List item 2 <span class="chevron"></span></li>
+                <li>List item 3 <span class="chevron"></span></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="content" class="snap-content">
+
+        <!-- Make sure all your bars are the first things in your <body> -->
+        <header class="bar-title">
+            <button class="button" id="toggle-left">Left</button>
+            <h1 class="title">Ratchet</h1>
+            <button class="button" id="toggle-right">Right</button>
+        </header>
+
+        <!-- Wrap all non-bar HTML in the .content div (this is actually what scrolls) -->
+        <div class="content">
+            <div class="content-padded">
+                <p class="welcome">Thanks for downloading Ratchet. This is an example HTML page that's linked up to
+                    compiled Ratchet CSS and JS, has the proper meta tags and the HTML structure. Need some more help
+                    before you start filling this with your own content? Check out some Ratchet resorces:</p>
+            </div>
+
+            <ul class="list inset">
+                <li>
+                    <a href="http://maker.github.com/ratchet/">
+                        <strong>Ratchet documentation</strong>
+                        <span class="chevron"></span>
+                    </a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+    <script type="text/javascript">
+        var
+            // Instance
+            snapper = new Snap({
+                element: document.getElementById('content')
+            });
+
+    </script>
+</body>
+
+</html>
